@@ -1,4 +1,4 @@
-# Face Recognition using Tensorflow
+# Intelligent Face Recognition System
 This is a TensorFlow project of the face recognizer with Movidius on RaspberryPi 3B+ platform. The project also uses Django and Tencent Cloud which providing the web platform. The project would like to build a safety and intelligent face recognition system in AI era.
 
 # Compatibility
