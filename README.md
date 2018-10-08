@@ -60,11 +60,19 @@ sudo pip3 install psutil
 
 # Notice
 
-sqlite3 数据库文件db.sqlite3 权限 666
+## Virtualenv
+
+pip3 install virtualenv
+
+Run Virtualenv
+
+source venv/bin/activate
+
+## sqlite3 数据库文件db.sqlite3 权限 666
 
 chmod 666 db.sqlite3
 
-django 所在文件夹 权限 775
+## django 所在文件夹 权限 775
 
 chmod 777 xxx
 
