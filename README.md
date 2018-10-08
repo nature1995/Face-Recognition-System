@@ -60,9 +60,13 @@ sudo pip3 install psutil
 
 # Notice
 
-sqlite3 数据库文件db.sqlite3 权限 644
+sqlite3 数据库文件db.sqlite3 权限 666
 
-django所在文件夹 权限 775
+chmod 666 db.sqlite3
+
+django 所在文件夹 权限 775
+
+chmod 777 xxx
 
 # Citation
 
