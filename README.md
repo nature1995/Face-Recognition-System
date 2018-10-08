@@ -58,6 +58,12 @@ cd
 
 sudo pip3 install psutil
 
+# Notice
+
+sqlite3 数据库文件db.sqlite3 权限 644
+
+django所在文件夹 权限 775
+
 # Citation
 
 Just can be used for non-business projects. 
