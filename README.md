@@ -21,25 +21,37 @@ Those modules can be installed using: `pip3 install xxx`.
 ## Install Django and Django REST framework
 
 pip3 -V
+
 sudo pip3 install -U setuptools
+
 sudo pip3 install -U django
+
 sudo pip3 install -U djangorestframework
+
 sudo pip3 install -U django-filter
+
 sudo pip3 install -U markdown
+
 sudo pip3 install -U requests
 
 ## Install Adafruit_Python_DHT library
 
 git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+
 cd Adafruit_Python_DHT
+
 sudo python3 setup.py install
+
 cd
 
 ## Install Adafruit_Python_BMP library
 
 git clone https://github.com/adafruit/Adafruit_Python_BMP.git
+
 cd Adafruit_Python_BMP
+
 sudo python3 setup.py install
+
 cd
 
 ## Install psutil (process and system utilities)
