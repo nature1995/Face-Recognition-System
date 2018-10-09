@@ -6,6 +6,11 @@ The code is tested using Tensorflow r1.7 and Movidius NCSDK2 under Debin 2018-06
 
 # Requirements
 
+* Logitech HD Webcam C270
+* Micro SD Card 32G
+* Raspberry Pi 3 B+
+* Intel Movidius Neural Compute Stick
+
 The code requires [Python 3.5](https://www.python.org/download/releases/3.5/), [Tensorflow 1.7](https://www.tensorflow.org/install/), as well as the following python libraries: 
 
 * Pillow
@@ -17,6 +22,16 @@ The code requires [Python 3.5](https://www.python.org/download/releases/3.5/), [
 * setuptools  40.4.3
 
 Those modules can be installed using: `pip3 install xxx`.
+
+## Neural Compute Application Zoo
+
+This repository is a place for any interested developers to share their projects (code and Neural Network content) that make use of the Intel® Movidius™ Neural Compute Stick (Intel® Movidius™ NCS) and associated [Intel® Movidius™ Neural Compute Software Development Kit](http://www.github.com/movidius/ncsdk).
+
+You can use the following url([NC App Zoo](https://github.com/movidius/ncappzoo)) or git command to use the ncsdk2 branch of the NC App Zoo repo:
+
+```bash
+git clone -b ncsdk2 https://github.com/movidius/ncappzoo.git
+```
 
 ## Install Django and Django REST framework
 
