@@ -1,0 +1,138 @@
+{% extends "theme.html" %}
+{% load staticfiles %}
+{% block content %}
+    <meta http-equiv="refresh" content="2">
+    <style>
+    #map-canvas {
+        width: 360px;
+        height: 270px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBxVDWCgsSKoXmoqFZg1kOjXlRzXUwt51g"></script>
+    <script>
+    function initialize() {
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: new google.maps.LatLng({{lat}}, {{lon}}),
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+
+{#    <script type="text/javascript">#}
+{#        var imageNr = 0; // Serial number of current image#}
+{#        var finished = new Array(); // References to img objects which have finished downloading#}
+{#        var paused = false;#}
+{##}
+{#        function createImageLayer() {#}
+{#          var img = new Image();#}
+{#          img.style.position = "absolute";#}
+{#          img.style.zIndex = -1;#}
+{#          img.onload = imageOnload;#}
+{#          img.onclick = imageOnclick;#}
+{#          img.src = "./?action=snapshot&n=" + (++imageNr);#}
+{#          var webcam = document.getElementById("webcam");#}
+{#          webcam.insertBefore(img, webcam.firstChild);#}
+{#        }#}
+{##}
+{#        // Two layers are always present (except at the very beginning), to avoid flicker#}
+{#        function imageOnload() {#}
+{#          this.style.zIndex = imageNr; // Image finished, bring to front!#}
+{#          while (1 < finished.length) {#}
+{#            var del = finished.shift(); // Delete old image(s) from document#}
+{#            del.parentNode.removeChild(del);#}
+{#          }#}
+{#          finished.push(this);#}
+{#          if (!paused) createImageLayer();#}
+{#        }#}
+{##}
+{#        function imageOnclick() { // Clicking on the image will pause the stream#}
+{#          paused = !paused;#}
+{#          if (!paused) createImageLayer();#}
+{#         }#}
+{#    </script>#}
+
+    <div class="container-fluid text-center justify-content-between">
+        <center><h1>Intelligent Facial Recognition System</h1></center>
+        <center><h3>Stevens Institute of Technology--Ziran Gong</h3></center>
+        <center><h4>{{dtstate}}</h4></center>
+        <section class="text-center">
+            <div class="container" >
+                <p>
+                    <a href="{% url '主页' %}" class="btn btn-dark my-2">Back home</a>
+                    <a href="{% url 'blogs' %}" class="btn btn-primary">博客 Blog</a>
+                    <a href="https://sites.google.com/view/ziran/" class="btn btn-danger">项目 Projects</a>
+                    <a href="https://weibo.com/gzryoulang" class="btn btn-warning">微博 Weibo</a>
+                    <a href="http://www.ranxiaolang.com:8000" class="btn btn-info">云盘 Cloud</a>
+                </p>
+            </div>
+        </section>
+        <br>
+        <div class="row text-center" >
+            <div class="col-sm-3"></div>
+            <div class="col-sm-2"><h4>Temperature</h4>
+                                <h4>{{tmpstate|floatformat:1}}&deg;C</h4></div>
+            <div class="col-sm-2"><h4>Humidity</h4>
+                                <h4>{{hmdstate|floatformat:1}}%</h4></div>
+
+            <div class="col-sm-2">
+            <h3>State</h3>
+            <form action="" method="post">{% csrf_token %}
+            <input type="submit" class="btn btn-primary" name="on" value="on" />
+            <input type="submit" class="btn btn-primary" name="off" value="off" />
+            </form></div>
+            <br>
+            <div class="col-sm-3"></div>
+{#            <div class="col-sm-3">#}
+{#            <h3>Mode</h3>#}
+{#            <form action="" method="post">{% csrf_token %}#}
+{#            <input type="submit" class="btn btn-primary" name="Auto" value="auto" />#}
+{#            <input type="submit" class="btn btn-primary" name="manual" value="manual" />#}
+{#            </form></div>#}
+             </div>
+        <div class="row text-center" >
+            <div class="col-sm-3"></div>
+            <div class="col-sm-2"><h4>Room</h4>
+            {% if roomstate == 'no' %}
+            <img src="{% static "g.png" %}">
+            {% else %}
+            <img src="{% static "r.png" %}">
+            {% endif %}</div>
+            <div class="col-sm-2"><h4>Door</h4>
+            {% if doorstate == 'closed' %}
+            <img src="{% static "g.png" %}">
+            {% else %}
+            <img src="{% static "r.png" %}">
+            {% endif %}</div>
+            <div class="col-sm-2"><h4>Object Detected: {{occupiedCount}}</h4>
+            {% if currentstate == 'on' %}
+            <img src="{% static "g.png" %}">
+            {% else %}
+            <img src="{% static "r.png" %}">
+            {% endif %}</div>
+             <div class="col-sm-3"></div>
+        </div>
+{#        <br>#}
+{#        <div class="col-lg-pull-0x`" style="height:270px ">#}
+{#        <div id="map-canvas"></div>#}
+{#        </div>#}
+{#        <br>#}
+
+        <div class="row text-center" >
+              {% if currentstate == 'on' %}
+             <div class="col-sm-4"></div>
+{#                <embed src="http://localhost:8080/?action=stream" type="audio/mpeg" width="775" height="485" >#}
+                <embed src="http://192.168.1.73:8080/?action=stream" type="audio/mpeg" width="775" height="485" >
+             <div class="col-sm-4"></div>
+             {% endif %}
+        </div>
+
+    </div>
+    <br>
+
+{% endblock content %}
