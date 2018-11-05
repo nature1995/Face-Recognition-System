@@ -4,6 +4,11 @@ This is a TensorFlow project of the face recognizer with Movidius on RaspberryPi
 # Compatibility
 The code is tested using Tensorflow r1.7 and Movidius NCSDK2 under Debin 2018-06-27（Kernel version:4.14） with django 2.1.1 and Python 3.5. 
 
+# Real Product Images
+ ![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/2.jpg)
+ ![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/1.jpg)
+ ![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/3.jpg)
+
 # Requirements
 
 * Logitech HD Webcam C270
