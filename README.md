@@ -7,6 +7,8 @@
 
 This is a project of the face recognizer with Movidius on RaspberryPi 3B+ platform. The project also uses Django and Django REST framework which providing the web platform. The project would like to build a safety and intelligent face recognition system in AI era.
 
+If you appreciate the content 📖, support projects visibility, give 👍| ⭐| 👏
+
 # Compatibility
 The code is tested using Tensorflow r1.7 and Movidius NCSDK2 under Debin 2018-06-27（Kernel version:4.14） with django 2.1.1 and Python 3.5. 
 
