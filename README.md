@@ -180,7 +180,7 @@ $ sudo systemctl stop mjpg-streamer.service
 
 Connect through the web browser:
 
-![Connected](https://cloud.githubusercontent.com/assets/185988/2740477/3501d5b0-c6d3-11e3-85de-de3ceb302325.png)
+![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/IFRS01.png)
 
 Most modern browsers(including mobile browsers like Safari and Chrome) will show the live stream immediately.
 
