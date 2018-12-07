@@ -5,7 +5,7 @@
 [![Language python](https://img.shields.io/badge/python-3.5-red.svg)](https://www.python.org)
 [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
 
-This is a project of the face recognizer with Movidius on RaspberryPi 3B+ platform. The project also uses Django and Django REST framework which providing the web platform. The project would like to build a safety and intelligent face recognition system in AI era.
+This is a project of the facial recognition with Movidius on RaspberryPi 3B+ platform. It also uses Django and Django REST framework which providing the web platform. The project would like to build a safety and intelligent face recognition system in AI era.
 
 If you appreciate the content 📖, support projects visibility, give 👍| ⭐| 👏
 
