@@ -33,8 +33,11 @@ The code requires [Python 3.5](https://www.python.org/download/releases/3.5/), [
 * pip  18.0
 * qrcode  6.0
 * setuptools  40.4.3
+* djangorestframework    
+* markdown            
+* django-filter 
 
-Those modules can be installed using: `pip3 install xxx`.
+Those modules can be installed using: `pip3 install xxx` or `pip install xxx` .
 
 ## Neural Compute Application Zoo
 
