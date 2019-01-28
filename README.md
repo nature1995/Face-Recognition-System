@@ -1,7 +1,9 @@
 # Intelligent Face Recognition System
 
-[![GitHub release](https://img.shields.io/badge/release-v1.0-brightgreen.svg)](https://github.com/nature1995/Face_Recognition_System/releases)
+[![GitHub release](https://img.shields.io/badge/release-v2.0-brightgreen.svg)](https://github.com/nature1995/Face_Recognition_System/releases)
 [![Language python](https://img.shields.io/badge/python-3.5-red.svg)](https://www.python.org)
+[![Language python](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org)
+[![Build Status](https://travis-ci.com/nature1995/Face-Recognition-System.svg?branch=master)](https://travis-ci.com/nature1995/Face-Recognition-System)
 [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
 
 This is a project of the facial recognition with Movidius on RaspberryPi 3B+ platform. It also uses Django and Django REST framework which providing the web platform. The project would like to build a safety and intelligent face recognition system in AI era.
@@ -20,7 +22,7 @@ ran-django-template/  # django platform using my own model
 requirements.txt  # requirements for run the code
 ```
 
-# Run it
+# How to run it
 1. Install requirements
 ```
 pip install -r requirements.txt
@@ -62,7 +64,7 @@ python iot_controller.py
 * Raspberry Pi 3 B+
 * Intel Movidius Neural Compute Stick
 
-The code requires [Python 3.5](https://www.python.org/download/releases/3.5/), [Tensorflow 1.7](https://www.tensorflow.org/install/), as well as the following python libraries: 
+The code requires [Python 3.5](https://www.python.org/download/releases/3.5/) or [Python 3.6](https://www.python.org/download/releases/3.6/), [Tensorflow 1.7](https://www.tensorflow.org/install/) or later, as well as the following python libraries: 
 
 * Pillow
 * django
@@ -76,6 +78,8 @@ The code requires [Python 3.5](https://www.python.org/download/releases/3.5/), [
 * django-filter 
 
 Those modules can be installed using: `pip3 install xxx` or `pip install xxx` .
+
+**Follow How to run it**
 
 ## Neural Compute Application Zoo
 
