@@ -52,6 +52,16 @@ make run
 cd iot_control
 python iot_controller.py
 ```
+**Admin Account**
+
+``` 
+python manage.py createsuperuser
+
+username: ranxiaolang
+email: YOUR EMAIL  
+password: ranxiaolang  
+```
+Access the web page though this link: http://127.0.0.1:8000/admin .  
 
 # Real Product Images
  ![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/2.jpg)
