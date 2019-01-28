@@ -1,9 +1,16 @@
-
-# Django-AI-IOT (<a href="http://ranxiaolang.com/" target="_blank">Web</a>)
+# ran-django-template
+[![python3.5](https://img.shields.io/badge/python-3.5-red.svg)]()
 [![python3.6](https://img.shields.io/badge/python-3.6-brightgreen.svg)]()
-[![django2.1.2](https://img.shields.io/badge/django-2.1.2-orange.svg)]()
+[![python3.7](https://img.shields.io/badge/python-3.6-blue.svg)]()
+[![django2.1.5](https://img.shields.io/badge/django-2.1.5-orange.svg)]()
+[![Build Status](https://travis-ci.com/nature1995/ran-django-template.svg?token=ihxd9jwdJ367UvYy3j9G&branch=master)](https://travis-ci.com/nature1995/ran-django-template)
 
-Django, AI facial recognition, IOT smart home, Rest Framework, Face++. Author: Ziran Gong
+Author: Ziran Gong
+
+# Preview
+http://ranxiaolang.com
+
+![image](https://github.com/nature1995/ran-django-template/raw/master/images/preview.png)
 
 # Compatibility
 The codes are tested using Travis-CI platform with django 2.1.5 and Python 3.5, 3.6, 3.6-dev, 3.7, 3.7-dev.
@@ -27,18 +34,32 @@ The code requires [Python 3.x](https://www.python.org/download/releases/3.6/), a
 
 Those modules can be installed using: `pip3 install xxx` or `pip install xxx`.
 
-# Run
+# How to run it
 ```
-git clone https://github.com/nature1995/Face-Recognition-System.git
+git clone https://github.com/nature1995/ran-django-template.git
 ```
 ```
 cd ran-django-template
+pip install -r requirements.txt
+python manage.py makemigrations
+python manage.py migrate
 python manage.py runserver
 ```
 Access the web page though this link: http://127.0.0.1:8000/
 
-# Citation
+**Admin Account**
+
+``` 
+python manage.py createsuperuser
+
+username: ranxiaolang
+email: YOUR EMAIL  
+password: ranxiaolang  
+```
+Access the web page though this link: http://127.0.0.1:8000/admin 
+# License
+
+This software is licensed under the GNU General Public License v3.0 License. For more information, read the file `LICENSE`.
 
 It need send a email to gzr2008@vip.qq.com and just can be used for non-business projects.
 
- 
