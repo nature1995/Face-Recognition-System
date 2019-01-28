@@ -1,6 +1,5 @@
 # Intelligent Face Recognition System
 
-
 [![GitHub release](https://img.shields.io/badge/release-v1.0-brightgreen.svg)](https://github.com/nature1995/Face_Recognition_System/releases)
 [![Language python](https://img.shields.io/badge/python-3.5-red.svg)](https://www.python.org)
 [![License](https://img.shields.io/dub/l/vibe-d.svg)](https://opensource.org/licenses/MIT)
@@ -10,11 +9,50 @@ This is a project of the facial recognition with Movidius on RaspberryPi 3B+ pla
 If you appreciate the content 📖, support projects visibility, give 👍| ⭐| 👏
 
 # Compatibility
-The code is tested using Tensorflow r1.7 and Movidius NCSDK2 under Debin 2018-06-27（Kernel version:4.14） with django 2.1.1 and Python 3.5. 
+The code is tested using Tensorflow r1.7 and Movidius NCSDK2 under Debin 2018-06-27（Kernel version:4.14） with django 2.1.5 and Python 3.5 & 3.6. 
+
+# File architecture
+```
+django_venv/  # django virtual env for RPI
+face_recognition_model/  # Movidius NCS code     
+iot_control/  # iot control code
+ran-django-template/  # django platform using my own model
+requirements.txt  # requirements for run the code
+```
+
+# Run it
+1. Install requirements
+```
+pip install -r requirements.txt
+```
+2. **Install Neural Compute Application Zoo**
+
+    Method attached below.
+
+3. **Install rpi-mjpg-streamer**
+
+    Method attached below.
+
+4. Run ran-django-template
+```
+cd ran-django-template
+python manage.py runserver 0.0.0.0:8000
+```
+
+5. Run face_recognition_model
+```
+cd face_recognition_model
+make run
+```
+
+6. Run iot_control
+```
+cd iot_control
+python iot_controller.py
+```
 
 # Real Product Images
  ![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/2.jpg)
- ![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/1.jpg)
  ![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/3.jpg)
 
 # Requirements
@@ -89,10 +127,9 @@ cd
 
 sudo pip3 install psutil
 
-# rpi-mjpg-streamer
+# Install rpi-mjpg-streamer
 
 Instructions and helper scripts for running mjpg-streamer on Raspberry Pi.
-
 
 ## A. Setup mjpg-streamer
 
@@ -117,27 +154,6 @@ $ git clone https://github.com/jacksonliam/mjpg-streamer
 $ cd mjpg-streamer/mjpg-streamer-experimental
 $ cmake -DCMAKE_INSTALL_PREFIX:PATH=.. .
 $ make install
-```
-
-### Setup video4linux for Raspberry Pi Camera module
-
-```
-$ sudo modprobe bcm2835-v4l2
-$ sudo vi /etc/modules
-
-# add following line:
-bcm2835-v4l2
-
-$ sudo vi /boot/config.txt
-
-# add following line if you want to disable RPi camera's LED:
-disable_camera_led=1
-```
-
-### Add yourself to the video group
-
-```
-$ sudo usermod -a -G video $USER
 ```
 
 ## B. Run mjpg-streamer
@@ -183,22 +199,26 @@ $ sudo systemctl stop mjpg-streamer.service
 
 Connect through the web browser:
 
-![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/IFRS01.png)
+![image](https://github.com/nature1995/Face_Recognition_System/raw/master/image/IFRS.png)
 
 Most modern browsers(including mobile browsers like Safari and Chrome) will show the live stream immediately.
-
-
 
 # Notice
 
 ## Virtualenv
+**Method 1**
+```
+pip3 install virtualenv   
+```
+Copy django_venv and activate   
+```
+source venv/bin/activate    
+```
 
-pip3 install virtualenv
-
-Run Virtualenv
-
-source venv/bin/activate
-
+**Method 2**  
+```
+pip install -r requirements.txt
+```
 ## sqlite3 数据库文件db.sqlite3 权限 666
 
 chmod 666 db.sqlite3
@@ -209,6 +229,6 @@ chmod 777 xxx
 
 # Citation
 
-Just can be used for non-business projects. 
+Just can be used for non-business projects. If you use ran-django-template, please give me a star. Thanks!
 
 
