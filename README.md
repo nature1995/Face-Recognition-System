@@ -1,4 +1,4 @@
-# Intelligent Face Recognition System
+# Intelligent Facial Recognition System
 
 [![GitHub release](https://img.shields.io/badge/release-v2.0-brightgreen.svg)](https://github.com/nature1995/Face_Recognition_System/releases)
 [![Language python](https://img.shields.io/badge/python-3.5-red.svg)](https://www.python.org)
